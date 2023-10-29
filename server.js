@@ -3,6 +3,7 @@ import * as dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./database/database.js";
 import { brandRouter, productRouter, userRouter } from "./routes/index.js";
+import categoryRouter from "./routes/category.js";
 
 const app = express();
 app.use(express.json());
@@ -19,6 +20,7 @@ app.get("/", function (req, res) {
 app.use("/users", userRouter);
 app.use("/products", productRouter);
 app.use("/brands", brandRouter);
+app.use("/category", categoryRouter);
 //Load .env file: config file
 dotenv.config();
 

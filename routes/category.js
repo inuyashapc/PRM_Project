@@ -1,6 +1,6 @@
 import express from "express";
-import { brandController } from "../controllers/index.js";
+import { categoryController } from "../controllers/index.js";
 const categoryRouter = express.Router();
-categoryRouter.get("/", brandController.getAll);
-categoryRouter.post("/", brandController.createBrand);
+categoryRouter.get("/", categoryController.getAll);
+categoryRouter.post("/", categoryController.createCategory);
 export default categoryRouter;
