@@ -2,7 +2,7 @@ import Product from "../models/Product.js";
 
 const getAll = async () => {
   try {
-    const result = await Product.find().populate("comment");
+    const result = await Product.find().populate("brand").populate("category");
     return result;
   } catch (error) {
     return error.toString();
@@ -13,7 +13,7 @@ const createProduct = async ({
   name,
   description,
   price,
-  typeKeyboard,
+  category,
   brand,
   thumbnail,
 }) => {
@@ -22,7 +22,7 @@ const createProduct = async ({
       name,
       description,
       price,
-      typeKeyboard,
+      category,
       brand,
       thumbnail,
     });
