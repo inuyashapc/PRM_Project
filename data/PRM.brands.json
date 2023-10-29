@@ -4,4 +4,46 @@
   },
   "name": "Logitech",
   "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653e175b7b26c22f417bacd2"
+  },
+  "name": "Akko",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653e17817b26c22f417bacd3"
+  },
+  "name": "Fuhlen",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653e17a17b26c22f417bacd4"
+  },
+  "name": "Corsair",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653e17b87b26c22f417bacd5"
+  },
+  "name": "Razer",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653e17c27b26c22f417bacd6"
+  },
+  "name": "E-DRA",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653e17fe7b26c22f417bacd7"
+  },
+  "name": "Dare-U",
+  "__v": 0
 }]
