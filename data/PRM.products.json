@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "653e208737944c99b4ce8ef0"
+  },
+  "name": "DareU EK75",
+  "description": "Layout 80 nút, keycap ABS, đèn LED rainbow, kết nối type-C",
+  "price": 590000,
+  "category": "653e1d0ad4308065b9524fee",
+  "brand": "653e17fe7b26c22f417bacd7",
+  "thumbnail": "https://product.hstatic.net/200000722513/product/38563bd2d5c0a8a07d4928bfda5fcc64.png_9b0f7402b03b4beea236b41293ad9c22_1024x1024.jpg"
+},
+{
+  "_id": {
+    "$oid": "653e226d37944c99b4ce8ef1"
+  },
+  "name": "AKKO 3087 RF ONE PIECE - LUFFY",
+  "description": "Layout 87 phím, keycap PBT chất lượng cao, kết nối đa dạng, có foam giảm âm",
+  "price": 1699000,
+  "category": "653e1d0ad4308065b9524fee",
+  "brand": "653e175b7b26c22f417bacd2",
+  "thumbnail": "https://hanoicomputercdn.com/media/product/74576_ban_phim_co_akko_3087_rf_one_piece_luffy_akko_switch_v3_cream_yellow_3.jpg"
+},
+{
+  "_id": {
+    "$oid": "653e240137944c99b4ce8ef2"
+  },
+  "name": "LOGITECH POP LAVENDER",
+  "description": "Layout 84 phím, kết nối chuẩn Bluetooth 5.1, 12 phím FN đa dụng, phím Emoji độc đáo",
+  "price": 1999000,
+  "category": "653e1d29d4308065b9524fef",
+  "brand": "653e1565dbe31530645397b6",
+  "thumbnail": "https://hanoicomputercdn.com/media/product/75603_ban_phim_khong_day_logitech_pop_keys_tim_lavender_920_011227_1.jpg"
+},
+{
+  "_id": {
+    "$oid": "653e24f737944c99b4ce8ef3"
+  },
+  "name": "CORSAIR K68",
+  "description": "Layout full phím, chống bụi và nước, LED RGB sặc sỡ, có bàn kê tay tăng sự thoải mái",
+  "price": 1799000,
+  "category": "653e1d36d4308065b9524ff0",
+  "brand": "653e17a17b26c22f417bacd4",
+  "thumbnail": "https://hanoicomputercdn.com/media/product/37125_keyboard_corsair_k68_mechanical_cherry_mx_red_ch_9102020_na_0000_1.jpg"
+},
+{
+  "_id": {
+    "$oid": "653e25ff37944c99b4ce8ef4"
+  },
+  "name": "RAZER BLACKWIDOW V3 MINI HYPERSPEED",
+  "description": "Layout 65%, công nghệ HYPERSPEED độ trễ thấp, keycap ABS doubleshot, LED Chroma 16.8 triệu màu",
+  "price": 2499000,
+  "category": "653e1d0ad4308065b9524fee",
+  "brand": "653e17b87b26c22f417bacd5",
+  "thumbnail": "https://hanoicomputercdn.com/media/product/76382_ban_phim_co_khong_day_razer_blackwidow_v3_mini_hyperspeed_3.jpg"
+}]
