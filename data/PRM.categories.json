@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "653e1d0ad4308065b9524fee"
+  },
+  "name": "Blue Switch",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653e1d29d4308065b9524fef"
+  },
+  "name": "Brown Switch",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653e1d36d4308065b9524ff0"
+  },
+  "name": "Red Switch",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653e1d45d4308065b9524ff1"
+  },
+  "name": "Black Switch",
+  "__v": 0
+}]
