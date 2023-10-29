@@ -37,14 +37,9 @@ const login = async (req, res) => {
   const { username, password } = req.body;
   try {
     const result = await userRepository.login({ username, password });
-    res.status(201).json({
-      message: "Login success",
-      data: result,
-    });
+    res.status(201).json({ success: result });
   } catch (error) {
-    res.status(500).json({
-      message: error.toString(),
-    });
+    res.status(500).json({ success: false });
   }
 };
 

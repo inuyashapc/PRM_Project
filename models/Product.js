@@ -15,9 +15,9 @@ const Product = mongoose.model(
       type: Number,
       require: false,
     },
-    typeKeyboard: {
+    category: {
       type: String,
-      require: false,
+      ref: "Category",
     },
     brand: {
       type: String,

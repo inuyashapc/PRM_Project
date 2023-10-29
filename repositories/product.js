@@ -13,8 +13,7 @@ const createProduct = async ({
   name,
   description,
   price,
-  discountPercentage,
-  stock,
+  typeKeyboard,
   brand,
   thumbnail,
 }) => {
@@ -23,8 +22,7 @@ const createProduct = async ({
       name,
       description,
       price,
-      discountPercentage,
-      stock,
+      typeKeyboard,
       brand,
       thumbnail,
     });

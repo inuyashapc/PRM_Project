@@ -21,9 +21,9 @@ const login = async ({ username, password }) => {
   try {
     const result = await User.findOne({ username, password });
     if (!result) {
-      throw new Error("Tai khoan mat khau khum dung");
+      return false;
     }
-    return result;
+    return true;
   } catch (error) {
     throw new Error(error.toString());
   }
