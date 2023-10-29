@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "653e0d071bc914c287a76a19"
+  },
+  "username": "admin",
+  "password": "12345678",
+  "role": "Admin",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653e0d261bc914c287a76a1b"
+  },
+  "username": "duyanh",
+  "password": "12345678",
+  "role": "User",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653e0d30088e3e50d6d04efa"
+  },
+  "username": "hoan",
+  "password": "12345678",
+  "role": "User",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653e0d34088e3e50d6d04efc"
+  },
+  "username": "thang",
+  "password": "12345678",
+  "role": "User",
+  "__v": 0
+}]
