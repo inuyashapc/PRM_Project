@@ -12,14 +12,14 @@ const User = mongoose.model(
       type: String,
       require: true,
     },
+    fullname: {
+      type: String,
+      require: false,
+    },
     role: {
       type: String,
       require: false,
       default: "User",
-    },
-    birthday: {
-      type: Date,
-      require: false,
     },
     phoneNumber: {
       type: String,

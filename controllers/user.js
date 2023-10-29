@@ -1,11 +1,12 @@
 import { userRepository } from "../repositories/index.js";
 
 const createUser = async (req, res) => {
-  const { username, password } = req.body;
+  const { username, password, role } = req.body;
   try {
     const result = await userRepository.createUser({
       username,
       password,
+      role,
     });
     res.status(201).json({
       message: "Create user success",

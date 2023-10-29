@@ -1,8 +1,8 @@
 import User from "../models/User.js";
 
-const createUser = async ({ username, password }) => {
+const createUser = async ({ username, password, role }) => {
   try {
-    const result = await User.create({ username, password });
+    const result = await User.create({ username, password, role });
     return result;
   } catch (error) {
     return error.toString();
