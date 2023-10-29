@@ -1,5 +1,4 @@
 import mongoose, { Mongoose, ObjectId, Schema } from "mongoose";
-import Image from "./Image.js";
 const Product = mongoose.model(
   "Product",
   new Schema({
@@ -16,41 +15,17 @@ const Product = mongoose.model(
       type: Number,
       require: false,
     },
-    discountPercentage: {
-      type: Number,
-      require: false,
-    },
-    stock: {
+    typeKeyboard: {
       type: String,
       require: false,
     },
     brand: {
       type: String,
-      require: false,
+      ref: "Brand",
     },
     thumbnail: {
       type: String,
     },
-    images: [
-      {
-        _id: {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: Image, // Tham chiếu đến model Image
-        },
-        url: {
-          type: String,
-        },
-        caption: {
-          type: String,
-        },
-      },
-    ],
-    comment: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Comment",
-      },
-    ],
   })
 );
 export default Product;

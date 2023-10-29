@@ -2,12 +2,7 @@ import express from "express";
 import * as dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./database/database.js";
-import {
-  cartRouter,
-  commentRouter,
-  productRouter,
-  userRouter,
-} from "./routes/index.js";
+import { brandRouter, productRouter, userRouter } from "./routes/index.js";
 
 const app = express();
 app.use(express.json());
@@ -23,8 +18,7 @@ app.get("/", function (req, res) {
 });
 app.use("/users", userRouter);
 app.use("/products", productRouter);
-app.use("/carts", cartRouter);
-app.use("/comments", commentRouter);
+app.use("/brands", brandRouter);
 //Load .env file: config file
 dotenv.config();
 
