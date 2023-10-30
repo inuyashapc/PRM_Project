@@ -32,11 +32,11 @@ const createProduct = async (req, res) => {
   }
 };
 
-const getProductByCategory = async (req, res) => {
-  const { category } = req.params;
+const getProductByBrand = async (req, res) => {
+  const { brand } = req.params;
   console.log("🚀 ========= category:", category);
   try {
-    const result = await productReposiroty.getProductByCategory(category);
+    const result = await productReposiroty.getProductByBrand(brand);
     res.status(200).json({
       message: "Get product success",
       data: result,
@@ -82,7 +82,7 @@ const getCommentByProduct = async (req, res) => {
 export default {
   getAll,
   createProduct,
-  getProductByCategory,
+  getProductByBrand,
   getDetail,
   getCommentByProduct,
 };
