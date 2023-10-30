@@ -31,6 +31,23 @@ const createProduct = async (req, res) => {
     });
   }
 };
+
+const getProductByCategory = async (req, res) => {
+  const { category } = req.params;
+  console.log("🚀 ========= category:", category);
+  try {
+    const result = await productReposiroty.getProductByCategory(category);
+    res.status(200).json({
+      message: "Get product success",
+      data: result,
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: error.toString(),
+    });
+  }
+};
+
 const getDetail = async (req, res) => {
   const { id } = req.params;
   console.log("🚀 ========= id:", id);
@@ -65,6 +82,7 @@ const getCommentByProduct = async (req, res) => {
 export default {
   getAll,
   createProduct,
+  getProductByCategory,
   getDetail,
   getCommentByProduct,
 };

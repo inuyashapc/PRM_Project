@@ -32,6 +32,16 @@ const createProduct = async ({
   }
 };
 
+const getProductByCategory = async (category) => {
+  try {
+    const result = await Product.find({ category: category }).populate("category").populate("brand");
+    return result;
+  } catch (error) {
+    return error.toString();
+  }
+}
+
+
 const getDetail = async (id) => {
   try {
     const result = await Product.findOne({ _id: id }).populate("comment");
@@ -52,6 +62,7 @@ const getCommentByProduct = async (id) => {
 export default {
   getAll,
   createProduct,
+  getProductByCategory,
   getDetail,
   getCommentByProduct,
 };
