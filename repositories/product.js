@@ -34,17 +34,21 @@ const createProduct = async ({
 
 const getProductByBrand = async (brand) => {
   try {
-    const result = await Product.find({ brand: brand }).populate("category").populate("brand");
+    const result = await Product.find({ category: category })
+      .populate("category")
+      .populate("brand");
     return result;
   } catch (error) {
     return error.toString();
   }
-}
-
+};
 
 const getDetail = async (id) => {
+  console.log("🚀 ========= 1234:", id);
   try {
-    const result = await Product.findOne({ _id: id }).populate("comment");
+    const result = await Product.findOne({ _id: id })
+      .populate("category")
+      .populate("brand");
     return result;
   } catch (error) {
     return error.toString();

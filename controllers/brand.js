@@ -1,4 +1,4 @@
-import { brandRepository, productReposiroty } from "../repositories/index.js";
+import { brandRepository } from "../repositories/index.js";
 
 const getAll = async (req, res) => {
   try {
