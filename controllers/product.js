@@ -76,10 +76,21 @@ const getCommentByProduct = async (req, res) => {
     });
   }
 };
+const getFiveCheapestProducts = async (req, res) => {
+  try {
+    const result = await productReposiroty.getFiveCheapestProducts();
+    res.status(200).json(result);
+  } catch (error) {
+    res.status(500).json({
+      message: error.toString(),
+    });
+  }
+};
 export default {
   getAll,
   createProduct,
   getProductByBrand,
   getDetail,
   getCommentByProduct,
+  getFiveCheapestProducts,
 };
