@@ -63,6 +63,7 @@ const getCommentByProduct = async (id) => {
     return error.toString();
   }
 };
+
 const getFiveCheapestProducts = async () => {
   try {
     const result = await Product.find()
@@ -76,6 +77,17 @@ const getFiveCheapestProducts = async () => {
   }
 };
 
+const getCheapestProducts = async () => {
+  try {
+    const result = await Product.find()
+      .populate("brand")
+      .populate("category")
+      .sort({ price: 1 }); // Sắp xếp theo giá tăng dần (1) hoặc giảm dần (-1)
+    return result;
+  } catch (error) {
+    return error.toString();
+  }
+};
 export default {
   getAll,
   createProduct,
@@ -83,4 +95,5 @@ export default {
   getDetail,
   getCommentByProduct,
   getFiveCheapestProducts,
+  getCheapestProducts,
 };

@@ -5,6 +5,7 @@ const productRouter = express.Router();
 productRouter.get("/", productController.getAll);
 productRouter.post("/", productController.createProduct);
 productRouter.get("/fiveCheapest", productController.getFiveCheapestProducts);
+productRouter.get("/cheapest", productController.getCheapestProducts);
 productRouter.get("/:id", productController.getDetail);
 productRouter.get("/:brand", productController.getProductByBrand);
 // productRouter.get("/:category", productController.getProductByCategory);

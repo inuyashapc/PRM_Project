@@ -63,9 +63,7 @@ const getDetail = async (req, res) => {
 const getCommentByProduct = async (req, res) => {
   try {
     const { id } = req.params;
-    console.log("🚀 ========= id:", id);
     const result = await productReposiroty.getCommentByProduct(id);
-    console.log("🚀 ========= result:1234", result);
     res.status(200).json({
       message: "Get comment by product success",
       data: result,
@@ -86,6 +84,18 @@ const getFiveCheapestProducts = async (req, res) => {
     });
   }
 };
+
+const getCheapestProducts = async (req, res) => {
+  try {
+    const result = await productReposiroty.getCheapestProducts();
+    res.status(200).json(result);
+  } catch (error) {
+    res.status(500).json({
+      message: error.toString(),
+    });
+  }
+};
+
 export default {
   getAll,
   createProduct,
@@ -93,4 +103,5 @@ export default {
   getDetail,
   getCommentByProduct,
   getFiveCheapestProducts,
+  getCheapestProducts,
 };
