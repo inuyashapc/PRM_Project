@@ -32,7 +32,7 @@ const createProduct = async ({
   }
 };
 
-const getProductByBrand = async (brand) => {
+const getProductByBrand = async () => {
   try {
     const result = await Product.find({ category: category })
       .populate("category")
@@ -88,6 +88,20 @@ const getCheapestProducts = async () => {
     return error.toString();
   }
 };
+
+const getFiveProduct = async () => {
+  try {
+    const result = await Product.find()
+      .populate("brand")
+      .populate("category")
+      .sort({ price: 1 }) // Sắp xếp theo giá tăng dần (1) hoặc giảm dần (-1)
+      .limit(5);
+    return result;
+  } catch (error) {
+    return error.toString();
+  }
+};
+
 export default {
   getAll,
   createProduct,
@@ -96,4 +110,5 @@ export default {
   getCommentByProduct,
   getFiveCheapestProducts,
   getCheapestProducts,
+  getFiveProduct,
 };
