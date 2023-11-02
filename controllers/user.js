@@ -8,10 +8,7 @@ const createUser = async (req, res) => {
       password,
       role,
     });
-    res.status(201).json({
-      message: "Create user success",
-      data: result,
-    });
+    res.status(201).json(result);
   } catch (error) {
     res.status(500).json({
       message: "Create is not successful",
@@ -34,12 +31,17 @@ const getAllUser = async (req, res) => {
 };
 
 const login = async (req, res) => {
-  const { username, password } = req.body;
+  console.log(req.body);
+  const  username  = req.body.username;
+  console.log(username);
+  const password = req.body.password;
+  console.log(password);
   try {
-    const result = await userRepository.login({ username, password });
-    res.status(201).json({ success: result });
+    const result = await userRepository.login( username, password );
+    console.log(result);
+    res.status(201).json(result);
   } catch (error) {
-    res.status(500).json({ success: false });
+    res.status(500).json({ error: error.toString() });
   }
 };
 
@@ -54,9 +56,23 @@ const getUserDetail = async (req, res) => {
     });
   }
 };
+
+const checknameexist = async (req, res) => {
+  const  username = req.params.username;
+  try {
+    const result = await userRepository.checkusername(username);
+    res.status(200).json(result);
+  } catch (error) {
+    res.status(500).json({
+      message: error.toString(),
+    });
+  }
+};
+
 export default {
   createUser,
   getAllUser,
   login,
   getUserDetail,
+  checknameexist,
 };
