@@ -102,6 +102,18 @@ const getFiveProduct = async () => {
   }
 };
 
+const getAllSearch = async (search) => {
+  try {
+    const regex = new RegExp(search, "i"); // "i" để tìm kiếm không phân biệt chữ hoa chữ thường
+    const result = await Product.find({ name: regex })
+      .populate("brand")
+      .populate("category");
+    return result;
+  } catch (error) {
+    return error.toString();
+  }
+};
+
 export default {
   getAll,
   createProduct,
@@ -111,4 +123,5 @@ export default {
   getFiveCheapestProducts,
   getCheapestProducts,
   getFiveProduct,
+  getAllSearch,
 };

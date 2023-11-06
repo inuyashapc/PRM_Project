@@ -1,12 +1,15 @@
 import { userRepository } from "../repositories/index.js";
 
 const createUser = async (req, res) => {
-  const { username, password, role } = req.body;
+  const { username, password, role, fullname, phoneNumber, address } = req.body;
   try {
     const result = await userRepository.createUser({
       username,
       password,
       role,
+      fullname,
+      phoneNumber,
+      address,
     });
     res.status(201).json(result);
   } catch (error) {
@@ -32,12 +35,12 @@ const getAllUser = async (req, res) => {
 
 const login = async (req, res) => {
   console.log(req.body);
-  const  username  = req.body.username;
+  const username = req.body.username;
   console.log(username);
   const password = req.body.password;
   console.log(password);
   try {
-    const result = await userRepository.login( username, password );
+    const result = await userRepository.login(username, password);
     console.log(result);
     res.status(201).json(result);
   } catch (error) {
@@ -58,7 +61,7 @@ const getUserDetail = async (req, res) => {
 };
 
 const checknameexist = async (req, res) => {
-  const  username = req.params.username;
+  const username = req.params.username;
   try {
     const result = await userRepository.checkusername(username);
     res.status(200).json(result);

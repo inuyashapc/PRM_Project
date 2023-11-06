@@ -41,7 +41,7 @@ const getProductByBrand = async (req, res) => {
   } catch (error) {
     res.status(500).json({
       message: error.toString(),
-    });
+    });gio
   }
 };
 
@@ -93,6 +93,17 @@ const getCheapestProducts = async (req, res) => {
   }
 };
 
+const getAllSearch = async (req, res) => {
+  const { search } = req.body;
+  try {
+    const result = await productReposiroty.getAllSearch(search);
+    res.status(200).json(result);
+  } catch (error) {
+    res.status(500).json({
+      message: error.toString(),
+    });
+  }
+};
 export default {
   getAll,
   createProduct,
@@ -101,4 +112,5 @@ export default {
   getCommentByProduct,
   getFiveCheapestProducts,
   getCheapestProducts,
+  getAllSearch,
 };

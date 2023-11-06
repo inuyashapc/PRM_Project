@@ -3,6 +3,7 @@ import { productController } from "../controllers/index.js";
 const productRouter = express.Router();
 
 productRouter.get("/", productController.getAll);
+productRouter.get("/search", productController.getAllSearch);
 productRouter.post("/", productController.createProduct);
 productRouter.get("/fiveCheapest", productController.getFiveCheapestProducts);
 productRouter.get("/cheapest", productController.getCheapestProducts);

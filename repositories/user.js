@@ -1,9 +1,23 @@
 import User from "../models/User.js";
 
-const createUser = async ({ username, password, role }) => {
+const createUser = async ({
+  username,
+  password,
+  role,
+  fullname,
+  phoneNumber,
+  address,
+}) => {
   try {
-    const result = await User.create({ username, password, role });
-    return result?true:false;
+    const result = await User.create({
+      username,
+      password,
+      role,
+      fullname: fullname ? fullname : "",
+      phoneNumber: phoneNumber ? phoneNumber : "",
+      address: address ? address : "",
+    });
+    return result ? true : false;
   } catch (error) {
     return error.toString();
   }
@@ -17,14 +31,17 @@ const getAllUser = async () => {
   }
 };
 
-const login = async ( username1, password1 ) => {
+const login = async (username1, password1) => {
   try {
-    const result = await User.findOne({ username:username1, password:password1 });
+    const result = await User.findOne({
+      username: username1,
+      password: password1,
+    });
     console.log(result);
     if (result) {
-      return {_id:result._id,role:result.role};
+      return { _id: result._id, role: result.role };
     }
-    return {_id:""};
+    return { _id: "" };
   } catch (error) {
     throw new Error(error.toString());
   }
@@ -42,8 +59,7 @@ const getUserDetail = async (id) => {
 const checkusername = async (name) => {
   try {
     const result = await User.findOne({ username: name });
-    if(result)
-      return true;
+    if (result) return true;
     return false;
   } catch (error) {
     return error.toString();
