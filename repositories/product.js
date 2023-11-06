@@ -32,9 +32,9 @@ const createProduct = async ({
   }
 };
 
-const getProductByBrand = async () => {
+const getProductByBrand = async (brand) => {
   try {
-    const result = await Product.find({ category: category })
+    const result = await Product.find({ brand: brand })
       .populate("category")
       .populate("brand");
     return result;

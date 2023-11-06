@@ -34,13 +34,10 @@ const createProduct = async (req, res) => {
 
 const getProductByBrand = async (req, res) => {
   const { brand } = req.params;
-  console.log("🚀 ========= category:", category);
+  console.log('data', brand);
   try {
     const result = await productReposiroty.getProductByBrand(brand);
-    res.status(200).json({
-      message: "Get product success",
-      data: result,
-    });
+    res.status(200).json(result);
   } catch (error) {
     res.status(500).json({
       message: error.toString(),

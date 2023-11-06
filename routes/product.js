@@ -7,7 +7,7 @@ productRouter.post("/", productController.createProduct);
 productRouter.get("/fiveCheapest", productController.getFiveCheapestProducts);
 productRouter.get("/cheapest", productController.getCheapestProducts);
 productRouter.get("/:id", productController.getDetail);
-productRouter.get("/:brand", productController.getProductByBrand);
+productRouter.get("/brand/:brand", productController.getProductByBrand);
 // productRouter.get("/:category", productController.getProductByCategory);
 productRouter.get("/:id/comments", productController.getCommentByProduct);
 
