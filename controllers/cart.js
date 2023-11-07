@@ -36,7 +36,7 @@ const getDetailCart = async (req, res) => {
 const addProduct = async (req, res) => {
   const { productId, cartId, quantity } = req.body;
   try {
-    const quantityTotal = parseInt(quantity);
+    const quantityTotal = parseInt(quantity || 1);
     const result = await cartRepository.addProduct({
       productId,
       cartId,

@@ -30,7 +30,7 @@ const createCart = async ({
 
 const getDetailCart = async (user) => {
   try {
-    const result = await Cart.findOne({ user });
+    const result = await Cart.findOne({ user }).populate("user");
     return result;
   } catch (error) {
     return error.toString();
